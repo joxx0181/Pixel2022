@@ -1,6 +1,5 @@
 package com.pixel2022;
 
-import android.annotation.SuppressLint;
 import android.graphics.Bitmap;
 import android.graphics.Color;
 import android.graphics.drawable.Drawable;
@@ -24,9 +23,20 @@ import java.util.ArrayList;
  * @author Joxx0181
  * @version 2022.0503
  */
+@SuppressWarnings("ALL")
 public class MainActivity extends AppCompatActivity {
 
-    // Initializing
+    /**
+     * Initializing
+     * @param spinnerText for text in spinner
+     * @param rgbColorText for info about touch enable
+     * @param rgbColorOfImage for color code of touched color
+     * @param pixelText for counted pixels of image
+     * @param pixelOfSelectedImageButton for start counting pixels
+     * @param arrayListImages for a arraylist of image text
+     * @param arrayListDrawables for a arraylist of images
+     * @param arrayAdapterImage for binding arraylists
+     */
     Spinner spinnerText;
     TextView rgbColorText;
     TextView rgbColorOfImage;
@@ -40,7 +50,6 @@ public class MainActivity extends AppCompatActivity {
     ArrayList<Integer> arrayListDrawables;
     ArrayAdapter<String> arrayAdapterImages;
 
-    @SuppressLint({"ResourceType", "ClickableViewAccessibility", "SetTextI18n", "UseCompatLoadingForDrawables"})
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
